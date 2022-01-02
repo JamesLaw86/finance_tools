@@ -11,9 +11,20 @@ import yfinance as yf
 import datetime
 import shelve
 import re
+from dataclasses import dataclass
 
+@dataclass
 class stock:
     """Class to represent a particular company"""
+    company: str = ''
+    symbol: str = ''
+    price: str = ''
+    market_cap: str = ''
+    sector: str = ''
+    industry: str = ''
+    market: str = ''
+    
+    """
     def __init__(self):
         self.company = ''
         self.symbol = ''
@@ -22,6 +33,7 @@ class stock:
         self.sector = ''
         self.industry = ''
         self.market = ''
+    """
     
     
 def read_available_stocks():
